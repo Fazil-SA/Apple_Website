@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react'
 const Hero = () => {
   useGSAP(() => {
     gsap.to('#hero', { opacity:1, delay:2, y:10 })
+    gsap.to('#cta', { opacity:1, delay:2, y:-50 })
   }, [])
 
   const [videoSrc, setVideoSrc] = useState(window.innerWidth < 760 ? smallHeroVideo : heroVideo);
@@ -40,9 +41,9 @@ const Hero = () => {
 
       
 
-      <div>
-        <button>Buy</button>
-        <p>From $199/month or $999</p>
+      <div id='cta' className='flex flex-col items-center justify-center opacity-0 translate-y-20'>
+        <button className='btn'>Buy</button>
+        <p className='font-normal text-xl'>From $199/month or $999</p>
       </div>
     </section>
   )
