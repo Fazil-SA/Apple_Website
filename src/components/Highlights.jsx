@@ -11,9 +11,9 @@ const Highlights = () => {
   }, [])
   return (
     <section className='bg-zinc w-screen overflow-hidden common-padding h-full'>
-      <div className='flex'>
-        <p id='title' className='section-heading'>Get the highlights.</p>
-        <div className='flex flex-1 gap-5 items-end justify-end w-full'>
+      <div className='flex max-lg:flex-col'>
+        <p id='title' className='section-heading max-lg:text-3xl'>Get the highlights.</p>
+        <div className='flex flex-1 gap-5 items-end justify-end w-full max-lg:flex-col max-lg:items-start'>
           <p className='link gap-3'>
             Watch the film
             <img src={watchImg} alt="watch" />
@@ -25,7 +25,7 @@ const Highlights = () => {
         </div>
       </div>
 
-      <div>
+      <div className='pt-10'>
         <VideoCarousel />
       </div>
     </section>
